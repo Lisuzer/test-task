@@ -14,7 +14,7 @@ import { UserModule } from './user/user.module';
     HttpModule,
     ConfigModule.forRoot(),
     MongooseModule.forRoot(
-      `mongodb+srv://user:user@cluster0.czlwfsq.mongodb.net/?retryWrites=true&w=majority`
+      `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.czlwfsq.mongodb.net/?retryWrites=true&w=majority`
     ),
   ],
   controllers: [AppController],
